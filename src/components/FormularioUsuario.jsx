@@ -9,6 +9,7 @@ function FormularioUsuario({ usuarioInicial, onGuardar }) {
     apellido: usuarioInicial?.apellido || '',
     email: usuarioInicial?.email || '',
     password: '',
+    confirmarPassword: '',
     rol: usuarioInicial?.rol || 'pasajero',
   })
   const [error, setError] = useState('')
@@ -28,8 +29,13 @@ function FormularioUsuario({ usuarioInicial, onGuardar }) {
       setError('Ingresa un correo válido.')
       return
     }
-    if ((!esEdicion || usuario.password) && !validarPassword(usuario.password)) {
+    const cambiarPassword = !esEdicion || usuario.password || usuario.confirmarPassword
+    if (cambiarPassword && !validarPassword(usuario.password)) {
       setError('La contraseña debe tener entre 4 y 10 caracteres.')
+      return
+    }
+    if (cambiarPassword && usuario.password !== usuario.confirmarPassword) {
+      setError('Las contraseñas no coinciden.')
       return
     }
     if (!['pasajero', 'admin'].includes(usuario.rol)) {
@@ -43,7 +49,7 @@ function FormularioUsuario({ usuarioInicial, onGuardar }) {
       email: usuario.email.trim().toLowerCase(),
       rol: usuario.rol,
     }
-    if (!esEdicion || usuario.password) {
+    if (cambiarPassword) {
       datos.password = usuario.password
     }
 
@@ -106,6 +112,19 @@ function FormularioUsuario({ usuarioInicial, onGuardar }) {
             <div className="form-text">Déjala vacía para conservar la contraseña actual.</div>
           )}
           <div className="form-text">Debe tener entre 4 y 10 caracteres.</div>
+        </div>
+        <div className="col-md-6">
+          <label htmlFor="confirmarPassword" className="form-label">Confirmar contraseña</label>
+          <input
+            id="confirmarPassword"
+            name="confirmarPassword"
+            type="password"
+            className="form-control"
+            value={usuario.confirmarPassword}
+            onChange={cambiarCampo}
+            required={!esEdicion}
+            autoComplete="new-password"
+          />
         </div>
         <div className="col-md-6">
           <label htmlFor="rol" className="form-label">Rol</label>
