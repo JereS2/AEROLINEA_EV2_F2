@@ -1,0 +1,382 @@
+:root {
+  --azul: #0b2545;
+  --azul-medio: #13315c;
+  --celeste: #8da9c4;
+  --coral: #ff7a59;
+  --coral-oscuro: #e8613f;
+  --fondo: #f4f6fa;
+  --borde: #e3e8ef;
+  --texto-suave: #6b7a90;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  background-color: var(--fondo);
+  color: #1c2a3a;
+}
+
+main {
+  min-height: 70vh;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: 700;
+  color: var(--azul);
+}
+
+.text-suave {
+  color: var(--texto-suave);
+}
+
+.text-coral {
+  color: var(--coral);
+}
+
+/* ---------- Botones ---------- */
+.btn-fjf {
+  background-color: var(--coral);
+  border-color: var(--coral);
+  color: white;
+  font-weight: 600;
+}
+
+.btn-fjf:hover,
+.btn-fjf:focus {
+  background-color: var(--coral-oscuro);
+  border-color: var(--coral-oscuro);
+  color: white;
+}
+
+.btn-fjf-azul {
+  background-color: var(--azul);
+  border-color: var(--azul);
+  color: white;
+  font-weight: 600;
+}
+
+.btn-fjf-azul:hover {
+  background-color: var(--azul-medio);
+  color: white;
+}
+
+/* ---------- Navbar ---------- */
+.navbar-fjf {
+  background-color: var(--azul);
+}
+
+.navbar-fjf .nav-link {
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 500;
+}
+
+.navbar-fjf .nav-link:hover,
+.navbar-fjf .nav-link.active {
+  color: white;
+}
+
+.logo {
+  font-weight: 800;
+  font-size: 1.35rem;
+  color: white;
+  letter-spacing: 0.5px;
+}
+
+.logo span {
+  color: var(--coral);
+}
+
+/* ---------- Portada ---------- */
+.portada {
+  background: linear-gradient(135deg, rgba(11, 37, 69, 0.92), rgba(19, 49, 92, 0.75)),
+    radial-gradient(circle at 80% 20%, #8da9c4 0, transparent 45%), var(--azul);
+  color: white;
+  padding: 80px 0 120px;
+}
+
+.portada h1 {
+  color: white;
+  font-size: 2.6rem;
+  font-weight: 800;
+}
+
+.buscador {
+  background: white;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 12px 40px rgba(11, 37, 69, 0.18);
+  margin-top: -70px;
+}
+
+/* ---------- Tarjetas ---------- */
+.tarjeta {
+  background: white;
+  border: 1px solid var(--borde);
+  border-radius: 14px;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.tarjeta:hover {
+  box-shadow: 0 8px 24px rgba(11, 37, 69, 0.1);
+  transform: translateY(-2px);
+}
+
+.ruta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ruta .codigo-ciudad {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--azul);
+}
+
+.ruta .linea {
+  flex: 1;
+  border-top: 2px dashed var(--celeste);
+  position: relative;
+}
+
+.ruta .linea i {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  padding: 0 6px;
+  color: var(--coral);
+}
+
+.precio {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--azul);
+}
+
+.precio-anterior {
+  text-decoration: line-through;
+  color: var(--texto-suave);
+  font-size: 0.9rem;
+}
+
+.badge-oferta {
+  background-color: var(--coral);
+}
+
+.tarjeta-destino {
+  background: linear-gradient(160deg, var(--azul-medio), var(--azul));
+  color: white;
+  border-radius: 14px;
+  padding: 28px 20px;
+  height: 100%;
+  text-decoration: none;
+  display: block;
+  transition: transform 0.2s;
+}
+
+.tarjeta-destino:hover {
+  transform: translateY(-3px);
+  color: white;
+}
+
+.tarjeta-destino i {
+  font-size: 2rem;
+  color: var(--coral);
+}
+
+.tarjeta-destino h5 {
+  color: white;
+  margin-top: 12px;
+}
+
+/* ---------- Mapa de asientos ---------- */
+.avion {
+  background: white;
+  border: 1px solid var(--borde);
+  border-radius: 60px 60px 16px 16px;
+  padding: 40px 20px 20px;
+  max-width: 340px;
+  margin: 0 auto;
+}
+
+.fila-asientos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+
+.pasillo {
+  width: 22px;
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--texto-suave);
+}
+
+.asiento {
+  width: 38px;
+  height: 38px;
+  border-radius: 8px 8px 4px 4px;
+  border: none;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.asiento.libre {
+  background-color: #d8e6f3;
+  color: var(--azul);
+}
+
+.asiento.libre:hover {
+  background-color: var(--celeste);
+}
+
+.asiento.ocupado {
+  background-color: #c9ced6;
+  color: #8a94a3;
+  cursor: not-allowed;
+}
+
+.asiento.seleccionado {
+  background-color: var(--coral);
+  color: white;
+}
+
+.leyenda span {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 4px;
+  margin-right: 4px;
+  vertical-align: middle;
+}
+
+/* ---------- Pase de abordar ---------- */
+.pase {
+  background: white;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 12px 36px rgba(11, 37, 69, 0.15);
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.pase-encabezado {
+  background-color: var(--azul);
+  color: white;
+  padding: 16px 24px;
+}
+
+.pase-cuerpo {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.pase-datos {
+  flex: 1 1 380px;
+  padding: 24px;
+}
+
+.pase-qr {
+  flex: 0 0 220px;
+  padding: 24px;
+  border-left: 2px dashed var(--borde);
+  text-align: center;
+  position: relative;
+}
+
+.pase-qr::before,
+.pase-qr::after {
+  content: '';
+  position: absolute;
+  left: -13px;
+  width: 24px;
+  height: 24px;
+  background: var(--fondo);
+  border-radius: 50%;
+}
+
+.pase-qr::before {
+  top: -12px;
+}
+
+.pase-qr::after {
+  bottom: -12px;
+}
+
+.dato-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--texto-suave);
+}
+
+.dato-valor {
+  font-weight: 700;
+  color: var(--azul);
+}
+
+@media (max-width: 576px) {
+  .portada h1 {
+    font-size: 1.9rem;
+  }
+
+  .pase-qr {
+    border-left: none;
+    border-top: 2px dashed var(--borde);
+    flex-basis: 100%;
+  }
+
+  .pase-qr::before,
+  .pase-qr::after {
+    display: none;
+  }
+}
+
+/* ---------- Admin ---------- */
+.admin-sidebar {
+  background-color: var(--azul);
+}
+
+@media (min-width: 768px) {
+  .admin-sidebar {
+    min-height: 100vh;
+  }
+}
+
+.admin-sidebar .nav-link {
+  color: rgba(255, 255, 255, 0.75);
+  border-radius: 8px;
+  margin-bottom: 2px;
+}
+
+.admin-sidebar .nav-link:hover,
+.admin-sidebar .nav-link.active {
+  background-color: var(--azul-medio);
+  color: white;
+}
+
+.admin-sidebar .nav-link i {
+  margin-right: 8px;
+}
+
+/* ---------- Footer ---------- */
+.footer-fjf {
+  background-color: var(--azul);
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-fjf a {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+}
+
+@media print {
+  .navbar,
+  footer,
+  .no-imprimir {
+    display: none !important;
+  }
+}
