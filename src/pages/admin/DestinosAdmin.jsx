@@ -33,7 +33,7 @@ function DestinosAdmin() {
               <th>Nombre</th>
               <th>Descripción</th>
               <th>Cantidad de vuelos</th>
-              <th className="text-end">Acciones</th>
+              <th className="text-end"></th>
             </tr>
           </thead>
           <tbody>
