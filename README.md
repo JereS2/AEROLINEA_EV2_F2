@@ -1,6 +1,6 @@
 # FJF Airlines 
 
-Sitio de reserva de vuelos hecho con **React + Vite + Bootstrap 5** para la Evaluación Parcial 2 de DSY1104 (Desarrollo Fullstack II, Duoc UC).
+Sitio de reserva de vuelos hecho con **React + Vite + Bootstrap 5** para la Evaluación Parcial 2 de DSY1104 .
 
 ## Cómo ejecutarlo
 
