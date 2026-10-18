@@ -8,7 +8,7 @@ Sitio de reserva de vuelos hecho con **React + Vite + Bootstrap 5** para la Eval
 npm install
 npm run dev          # abre el sitio en http://localhost:5173
 npm run test:run     # corre las pruebas una vez
-npm run coverage     # pruebas + reporte de cobertura (carpeta coverage/)
+npm run coverage     # pruebas + reporte de cobertura (carpeta coverage/, mínimo 70 %)
 ```
 
 Cuentas de prueba:
@@ -40,6 +40,6 @@ src/
 
 ## Integrantes
 
-- Jeremias Salinas
-- (completar)
-- (completar)
+- Jeremías Salinas
+- Felipe Olguín
+- Fernando Pérez

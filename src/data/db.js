@@ -13,7 +13,8 @@ function leer(clave, datosIniciales) {
   if (guardado) {
     return JSON.parse(guardado)
   }
-  return datosIniciales
+  // se devuelve una copia para no modificar los datos iniciales originales
+  return JSON.parse(JSON.stringify(datosIniciales))
 }
 
 function guardar(clave, datos) {
