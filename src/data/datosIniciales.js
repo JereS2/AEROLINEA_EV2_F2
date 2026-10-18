@@ -68,15 +68,15 @@ export const blogsIniciales = [
   {
     id: 1,
     titulo: '5 lugares imperdibles en San Pedro de Atacama',
-    resumen: 'Lagunas altiplánicas, géiseres y el Valle de la Luna en un solo viaje.',
-    contenido: 'Escribe aquí el contenido completo del artículo.',
-    fecha: '2026-09-20',
+    fecha: '15 de marzo, 2026',
+    resumen: 'Desde el Valle de la Luna hasta los Géiseres del Tatio, descubre lo mejor del desierto más árido del mundo.',
+    contenido: 'San Pedro de Atacama es uno de los destinos turísticos más fascinantes de Chile. Ofrece paisajes lunares, salares infinitos y lagunas altiplánicas. Lugares imperdibles: 1. Valle de la Luna. 2. Géiseres del Tatio al amanecer. 3. Lagunas Escondidas de Baltinache con alta salinidad. 4. Salar de Atacama y Laguna Chaxa con flamencos. 5. Valle de la Muerte ideal para trekking. Recuerda hidratarte y aclimatarte a la altura.'
   },
   {
     id: 2,
     titulo: 'Qué llevar en tu equipaje de mano',
-    resumen: 'Una lista simple para viajar liviano y sin problemas en el control.',
-    contenido: 'Escribe aquí el contenido completo del artículo.',
-    fecha: '2026-10-02',
-  },
+    fecha: '2 de abril, 2026',
+    resumen: 'Aprende a optimizar el espacio de tu maleta de cabina y evita cobros sorpresa en el aeropuerto.',
+    contenido: 'Viajar con equipaje de mano ahorra tiempo valioso. Recomendaciones clave: 1. Documentación accesible como carnet y tarjeta de embarque. 2. Artículos electrónicos como notebooks y baterías siempre en cabina. 3. Líquidos en envases de hasta 100 ml en bolsa transparente. 4. Una prenda de abrigo por el frío en cabina. 5. Medicamentos con receta en su empaque original.'
+  }
 ]
